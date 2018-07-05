@@ -1,3 +1,6 @@
+
+package test1;
+import java.util.InputMismatchException;
 import java.util.Scanner;
 public class NewClass1 {
     private static int rev(int  val){
@@ -10,13 +13,20 @@ public class NewClass1 {
   public static void main(String args[]){
       System.out.printf("-->");
     Scanner s=new Scanner(System.in); 
-    int N=s.nextInt();
-   
-    if(N<=20){
+    int N=0;
+    try{
+     N=s.nextInt();
+     if(N>=0&&N<=20){
     System.out.printf(""+rev(N));
     }
     else{
-    System.out.printf("enter number not greater than 20");
+    System.out.printf("enter number between 0 and  20 ");
     }
+    }
+    catch(InputMismatchException e){
+    System.out.printf("enter a integer-4");
+    NewClass1.main(args);
+    }
+    
   }  
 }
