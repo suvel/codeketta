@@ -23,7 +23,7 @@ public class NewClass1 {
     }
     }
     catch(InputMismatchException e){
-    System.out.printf("enter a integer-4");
+    System.out.printf("enter a integer");
     NewClass1.main(args);
     }
     
