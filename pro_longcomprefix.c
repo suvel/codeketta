@@ -1,8 +1,8 @@
 #include<stdio.h>
 #include<string.h>
+
 void main(){
 int N,i;
-printf("number");
 scanf("%d",&N);
 char name[N][100000];
 for(i=0;i<N;i++){
@@ -28,7 +28,6 @@ char MK=NULL;
 if(MK==0 || MK==name[tempN][i]){
 MK=name[tempN][i];
 count++;
-printf("%d %c\n",count,MK);
 }
 tempN++;
  }
