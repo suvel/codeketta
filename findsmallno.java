@@ -5,12 +5,12 @@ import java.lang.*;
 import java.io.*;
 
 /* Name of the class has to be "Main" only if the class is public. */
-class Ideone
+class findsmallno
 {
 	public static void main (String[] args) throws java.lang.Exception
 	{
-	Scanner s=new Scanner(System.in);
-	int count=1,y=s.nextInt();
+		Scanner s=new Scanner(System.in);
+	int count=0,y=s.nextInt();
 	 List q = new ArrayList();
 	while(y>0){
 		count++;
@@ -19,8 +19,9 @@ class Ideone
 		
 	}
 	 int k=s.nextInt();
+	 k=count-k;
                int j=k,sum1=0,sum2=0;
-   for(int h=count-j+1;h>=0;h--){
+   for(int h=count-j;h>=0;h--){
                        sum1=0;
      j=k-1;
      try{
@@ -30,7 +31,7 @@ class Ideone
      }
      }
      catch(Exception e){
-      //System.out.println(""+e);
+      
      }
 
      if(sum2==0){
@@ -44,5 +45,5 @@ class Ideone
    }
 
    System.out.printf("--->"+sum2);
- }
 	}
+}
