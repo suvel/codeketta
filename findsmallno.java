@@ -9,8 +9,9 @@ class findsmallno
 {
 	public static void main (String[] args) throws java.lang.Exception
 	{
-		Scanner s=new Scanner(System.in);
-	int count=0,y=s.nextInt();
+		try{
+	Scanner s=new Scanner(System.in);
+	int count=1,y=s.nextInt();
 	 List q = new ArrayList();
 	while(y>0){
 		count++;
@@ -19,18 +20,23 @@ class findsmallno
 		
 	}
 	 int k=s.nextInt();
-	 k=count-k;
+	 k=count-1-k;
+	
                int j=k,sum1=0,sum2=0;
    for(int h=count-j;h>=0;h--){
                        sum1=0;
+                       
      j=k-1;
      try{
+     	
      while(j>=0){
        sum1=sum1*10+(int)q.get(h+j);
        j--;
+
      }
      }
      catch(Exception e){
+      
       
      }
 
@@ -44,6 +50,10 @@ class findsmallno
    
    }
 
-   System.out.printf("--->"+sum2);
+   System.out.printf(""+sum2);
+ }
+catch(InputMismatchException ex){
+	System.out.println("enter integer");
+}		
 	}
-}
+	}
