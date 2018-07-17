@@ -14,4 +14,4 @@ for j in range (0,len(i)):
 		large_str=inew
 	else:
 		inew=inew+i[j]
-print(large_str)
+print(len(large_str))		
