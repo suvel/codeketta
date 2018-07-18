@@ -1,20 +1,23 @@
-
-value=int(input())
-j=int(input())
-k=int(input())
+value,j,k=raw_input().split()
+value=int(value)
+j=int(j)
+k=int(k)
 sum=0
 if value%2==0:
-	while(sum<=value):
-	
+	value=value/2;
+	while(sum!=value):
+		sum=sum+j
+		if(sum<value):
+			sum=sum+k
+		
 		if(sum==value):
 			print("yes")
 			break
-		elif(sum>value):
+		if(sum>value):
 			print("no")
 			break
-		else:
-			sum=sum+k
-		sum=sum+j	
+		
+		print("sum--"+str(sum))	
 else:
 	print("no")
 	
