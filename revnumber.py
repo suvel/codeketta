@@ -1,4 +1,3 @@
-print("enter the number to be reversed-")
 try:
 	i=int(input())
 	print(i)
