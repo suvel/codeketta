@@ -1,22 +1,18 @@
-a=str(input())
-b=str(input())
-la=len(a)
-lb=len(b)
-delete=1
-update=1
-insert=1
-if la>lb:
-	for char in range(la-1,la-lb-1,-1):
-		
-		a = a.replace(a[char],"")
-		delete=delete+1
-for i in range(0,lb):
-	if i>=la:
-		a=a+b[i]
-		insert=insert+1
-	if b[i]!=a[i]:
-		print("a--"+a[i]),
-		print("b--"+b[i])
-		update=update+1
-print(delete+update+insert),
-print(a)
+R=raw_input()
+j=len(R)
+C=0
+C1=0
+P=0
+
+for i in range(j):
+	C=0
+	for k in range(0,j):
+		if(R[i]==R[k]):
+			C=C+1
+	if(C1==0):
+		C1=C
+		P=R[i]
+	if(C1<C):
+		C1=C
+		P=R[i]
+print(P)
