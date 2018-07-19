@@ -21,18 +21,21 @@ delete=0
 update=0
 insert=0
 if la>lb:
-	for char in range(la-1,la-lb-1,-1):
-		
-		a = a.replace(a[char],"")
+	for char in range(la-1,la-lb,-1):
 		delete=delete+delin(a.upper(),char)
+		a = a.replace(a[char],"")
 		
+	la=len(a)	
 for i in range(0,lb):
+	#print(str(la)+"b"+str(i))
 	if i>=la:
-		
-		insert=insert+delin(a.upper(),i)
-	if b[i]!=a[i]:
-		
-		update=update+up(a.upper(),b.upper(),i)
+		#print(b[i])
+		insert=insert+delin(b.upper(),i)
+	
+	else:
+		#print("a"+str(i))
+		if b[i]!=a[i]:
+			update=update+up(a.upper(),b.upper(),i)
 		
 print(delete+update+insert)
 
