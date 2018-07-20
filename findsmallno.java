@@ -1,4 +1,4 @@
-/* package whatever; // don't place package name! */
+
 
 import java.util.*;
 import java.lang.*;
@@ -11,18 +11,18 @@ class findsmallno
 	{
 		try{
 	Scanner s=new Scanner(System.in);
-	int count=1,y=s.nextInt();
-	 List q = new ArrayList();
+	int count=1;
+        long y=s.nextLong();
+	 List<Long> q = new ArrayList();
 	while(y>0){
 		count++;
 		q.add(y%10);
 		y=y/10;
-		
-	}
+		}
 	 int k=s.nextInt();
 	 k=count-1-k;
-	
-               int j=k,sum1=0,sum2=0;
+               int j=k;
+               long sum1=0,sum2=0;
    for(int h=count-j;h>=0;h--){
                        sum1=0;
                        
@@ -30,14 +30,15 @@ class findsmallno
      try{
      	
      while(j>=0){
-       sum1=sum1*10+(int)q.get(h+j);
+         //System.out.print("h "+h+"j "+j+" "+q.get(h+j)+"\t");
+       sum1=sum1*10+(long)q.get(h+j);
        j--;
 
      }
      }
      catch(Exception e){
       
-      
+      ///	System.out.println(e);
      }
 
      if(sum2==0){
