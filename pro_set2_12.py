@@ -15,5 +15,5 @@ else:
 			A[i+1]=temp
 		for i in range(N-1):
 			print(A[i],end=" "),
-		print(A[N-1])	
+		print(A[N-1])
 	
