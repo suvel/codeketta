@@ -13,7 +13,7 @@ else:
 			temp=A[i]
 			A[i]=A[i+1]
 			A[i+1]=temp
-		for i in range(N):
-			print(A[i],end=" ")
-	
+		for i in range(N-1):
+			print(A[i],end=" "),
+		print(A[N-1])	
 	
