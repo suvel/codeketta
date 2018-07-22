@@ -2,7 +2,7 @@ import sys
 N,K=input().split()
 N=int(N)
 K=int(K)
-if(1<=N and K<=100000):
+if(1>N and K>100000):
 	sys.exit()
 else:
 	temp=0
@@ -14,6 +14,6 @@ else:
 			A[i]=A[i+1]
 			A[i+1]=temp
 		for i in range(N):
-			print(A[i],end="")
+			print(A[i],end=" ")
 	
 	
