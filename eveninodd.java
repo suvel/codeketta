@@ -32,5 +32,5 @@ class eveninodd {
            System.out.println(e);
 }
     }
-   
+  
 }
