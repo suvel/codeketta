@@ -1,13 +1,7 @@
-N,K=input().split()
-N=int(N)
-K=int(K)
-A=[]
-A=input().split()
-B=list()
-for i in range(N):
-	B.append(int(A[i]))
-while(K>1):
-	M=max(B)
-	B.pop(B.index(M))
-	K=K-1
-print(max(B))	
+N=str(input())
+N_S=len(N)
+A=list()
+for i in range(N_S-1,-1,-1):
+	A.append(N[i])
+print("".join(A))	
+	
