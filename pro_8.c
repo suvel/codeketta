@@ -10,7 +10,7 @@ int gcd(int n1,int n2){
     return gcd;
 }
 int main(void) {
-	int N,Q,i;
+	int N,Q,i,l,r;
 scanf("%d %d",&N,&Q);
 int A[N];
 for(i=0;i<N;i++){
@@ -21,7 +21,8 @@ for(i=0;i<Q;i++){
 	scanf("%d %d",&L[i],&R[i]);
 }
 for(i=0;i<Q;i++){
-printf("%d\n",gcd(L[i],R[i]));	
+l=L[i]-1;r=R[i]-1;
+printf("%d\n",gcd(A[l],A[r]));	
 }
 
 	return 0;
