@@ -8,6 +8,7 @@ A=[]
 A=input().split()
 count=0
 charge=0
+l=list()
 for i in range(N):
 	count=0
 	charge=0
@@ -21,6 +22,7 @@ for i in range(N):
 			charge=check(int(A[h]))
 		else:
 			break
-	print(count,end=' ')	
+	l.append(count)
+print(*l)	
 		
 			
